@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz 24 &lt;3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #f5f5dc, #ffcce0, #ffe6f0);
+
+            background-size: 400% 400%;
+            animation: backgroundAnimation 10s ease infinite;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 10px solid;
+            border-image-slice: 1;
+            border-width: 15px;
+            border-image-source: linear-gradient(45deg, #ffb3d1, #ffcce0, #ffe6f0);
+            animation: borderAnimation 5s linear infinite;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes borderAnimation {
+            0% {
+                border-image-source: linear-gradient(45deg, #ffb3d1, #ffcce0, #ffe6f0);
+            }
+            50% {
+                border-image-source: linear-gradient(45deg, #ffe6f0, #ffb3d1, #ffcce0);
+            }
+            100% {
+                border-image-source: linear-gradient(45deg, #ffb3d1, #ffcce0, #ffe6f0);
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ff99aa;
+            margin-top: 20px;
+            animation: heartbeat 1.5s infinite, glow 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                color: #ff99aa;
+                transform: scale(1);
+            }
+            50% {
+                color: #ffcce0;
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 5px #ff99aa, 0 0 10px #ffcce0, 0 0 20px #ff99aa;
+            }
+            50% {
+                text-shadow: 0 0 10px #ffcce0, 0 0 20px #ff99aa, 0 0 30px #ffe6f0;
+            }
+        }
+
+        .photos {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .photos img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border: 5px solid #ff99aa;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .photos img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        p {
+            color: #b35a6a;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .falling {
+            position: absolute;
+            top: -50px;
+            animation: fall 8s infinite;
+        }
+
+        .falling.heart {
+            width: 20px;
+            height: 20px;
+            background-color: #ff99aa;
+            transform: rotate(-45deg);
+        }
+
+        .falling.heart:before,
+        .falling.heart:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff99aa;
+            border-radius: 50%;
+        }
+
+        .falling.heart:before {
+            top: -10px;
+            left: 0;
+        }
+
+        .falling.heart:after {
+            left: 10px;
+            top: 0;
+        }
+
+        .falling.bear {
+            width: 80px;
+            height: 80px;
+        }
+
+        .falling.star {
+            width: 15px;
+            height: 15px;
+            background-color: gold;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: fall 8s infinite, spin 2s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .falling.text {
+            font-size: 2.5rem;
+            color: #ff99aa;
+            font-family: 'Great Vibes', cursive;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz #24 Mi Amor</h1>
+    <div class="photos">
+        <img src="images/nosotros.jpg" alt="Foto 1">
+        <img src="images/nosotros1.jpg" alt="Foto 2">
+    </div>
+    <p>Mi amor por ti crece cada día. Feliz primer mes, mi vida. 💖</p>
+    <div class="photos">
+        <img src="images/nosotros2.jpg" alt="Foto 3">
+        <img src="images/nosotros6.jpg" alt="Foto 4">
+    </div>
+
+    <!-- Kurumis -->
+    <div class="falling heart" style="left: 5%; animation-delay: 0s;"></div>
+    <div class="falling heart" style="left: 10%; animation-delay: 0.5s;"></div>
+    <div class="falling heart" style="left: 15%; animation-delay: 1s;"></div>
+    <div class="falling heart" style="left: 20%; animation-delay: 1.5s;"></div>
+    <div class="falling heart" style="left: 25%; animation-delay: 2s;"></div>
+
+    <!-- Kurumis -->
+    <div class="falling star" style="left: 30%; animation-delay: 1s;"></div>
+    <div class="falling star" style="left: 70%; animation-delay: 3s;"></div>
+
+    <!-- Kurumis -->
+    <img src="images/kurumi.png" alt="Bear" class="falling bear" style="left: 25%; animation-delay: 2s;">
+    <img src="images/kurumi1.png" alt="Bear" class="falling bear" style="left: 75%; animation-delay: 3s;">
+    <img src="images/kurumi2.png" alt="Bear" class="falling bear" style="left: 15%; animation-delay: 4s;">
+    <img src="images/kurumi1.png" alt="Bear" class="falling bear" style="left: 10%; animation-delay: 5s;">
+    <img src="images/kurumi2.png" alt="Bear" class="falling bear" style="left: 70%; animation-delay: 6s;">
+    <img src="images/kurumi1.png" alt="Bear" class="falling bear" style="left: 85%; animation-delay: 7s;">
+    <img src="images/kurumi2.png" alt="Bear" class="falling bear" style="left: 5%; animation-delay: 8s;">
+    <img src="images/kurumi1.png" alt="Bear" class="falling bear" style="left: 90%; animation-delay: 9s;">
+    <!-- Kurumis -->
+    <span class="texto jyl" style="left: 15%; animation-delay: 1s;">Te Amo</span>
+    <span class="texto jyl" style="left: 50%; animation-delay: 3s;">Mi Vida</span>
+    <span class="texto jyl" style="left: 85%; animation-delay: 5s;">Feliz Primer Mes</span>
+    <span class="texto jyl" style="left: 10%; animation-delay: 7s;">Te Amo</span>
+    <span class="texto jyl" style="left: 60%; animation-delay: 9s;">Mi Vida</span>
+    <span class="falling text" style="left: 90%; animation-delay: 1s;">Feliz Primer Mes</span>
+
+
+</body>
+</html>
